@@ -5,16 +5,19 @@ Library  ../quick_start_guide/QuickStartGuide/lib/LoginLibrary.py
 
 *** Test Cases ***
 User can create an account and log in
+        [Documentation]  Test written in KDD style
         Create Valid User                       fred             P4ssw0rd
         Attempt to Login with Credentials       fred             P4ssw0rd
         Status Should Be                        Logged In
 
 User cannot log in with bad password
+        [Documentation]  Test written in KDD style
         Create Valid User                       betty            P4ssw0rd
         Attempt to Login with Credentials       betty            wrong
         Status Should Be                        Access Denied
 
 User can change password
+        [Documentation]  Test written in BDD style
         Given a user has a valid account
         When she changes her password
         Then she can log in with the new password
